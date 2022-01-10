@@ -1,0 +1,516 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+html,
+body {
+	font-family: Verdana, sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h1,
+h3 {
+	font-family: "Segoe UI", Arial, sans-serif;
+	font-weight: 400;
+	margin: 10px 0;
+}
+
+.wtc-wide {
+	letter-spacing: 4px;
+}
+
+.wtc-image {
+	max-width: 100%;
+	height: auto;
+}
+
+img {
+	vertical-align: middle;
+}
+
+a {
+	color: inherit;
+}
+
+.wtc-button {
+	border: none;
+	display: inline-block;
+	padding: 8px 16px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
+	background-color: inherit;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.wtc-button {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.wtc-button:disabled {
+	cursor: not-allowed;
+	opacity: 0.3;
+}
+
+:disabled * {
+	pointer-events: none;
+}
+
+.wtc-display-container {
+	position: relative;
+}
+
+.wtc-input {
+	padding: 8px;
+	display: block;
+	border: none;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+}
+
+.wtc-bar {
+	width: 100%;
+	overflow: hidden;
+}
+
+.wtc-bar .wtc-bar-item {
+	padding: 8px 16px;
+	float: left;
+	width: auto;
+	border: none;
+	display: block;
+	outline: 0;
+}
+
+.wtc-bar .wtc-button {
+	white-space: normal;
+}
+
+.wtc-block {
+	display: block;
+	width: 100%;
+}
+
+.wtc-container:after,
+.wtc-container:before,
+.wtc-row-padding:after,
+.wtc-row-padding:before,
+.wtc-bar:before,
+.wtc-bar:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.wtc-col {
+	float: left;
+	width: 100%;
+}
+
+
+/* --- Table -- */
+
+.wtc-table {
+	margin: auto;
+	min-width: 300px;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.wtc-table tr:first-child {
+	border-top: none;
+	background: #f0f2f3;
+	color: rgb(14, 13, 13);
+}
+
+.wtc-table tr {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background-color: #f5f9fc;
+}
+
+.wtc-table tr:nth-child(odd):not(:first-child) {
+	background-color: #ebf3f9;
+}
+
+.wtc-table th {
+	display: none;
+}
+
+.wtc-table td {
+	display: block;
+}
+
+.wtc-table td:first-child {
+	margin-top: 0.5em;
+}
+
+.wtc-table td:last-child {
+	margin-bottom: 0.5em;
+}
+
+.wtc-table td:before {
+	content: attr(data-th) ": ";
+	font-weight: bold;
+	width: 120px;
+	display: inline-block;
+	color: #000;
+}
+
+.wtc-table th,
+.wtc-table td {
+	text-align: left;
+}
+
+.wtc-table {
+	color: #333;
+	border-radius: 0.4em;
+	overflow: hidden;
+}
+
+.wtc-table tr {
+	border-color: #bfbfbf;
+}
+
+.wtc-table th,
+.wtc-table td {
+	padding: 0.5em 1em;
+}
+
+
+/* --- Login-- */
+
+.login {
+	position: absolute;
+	top: 30px;
+	right: 16px;
+	width: 400px;
+	margin: 16px auto;
+	font-size: 16px;
+}
+
+
+/* Reset top and bottom margins from certain elements */
+
+.login-header,
+.login p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+
+/* The triangle form is achieved by a CSS hack */
+
+.login-triangle {
+	width: 0;
+	margin-right: auto;
+	margin-left: auto;
+	border: 12px solid transparent;
+	border-bottom-color: #000;
+}
+
+.login-header {
+	background: #28d;
+	padding: 20px;
+	font-size: 1.4em;
+	font-weight: normal;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.login-container {
+	background: #fff;
+	padding: 12px;
+}
+
+.hide-login {
+	display: none;
+}
+
+
+/* Every row inside .login-container is defined with p tags */
+
+.login p {
+	padding: 12px;
+}
+
+.login input {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	border-width: 1px;
+	border-style: solid;
+	padding: 16px;
+	outline: 0;
+	font-family: inherit;
+	font-size: 0.95em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+	background: #fff;
+	border-color: #bbb;
+	color: #555;
+}
+
+
+/* Text fields' focus effect */
+
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+	border-color: #888;
+}
+
+.login input[type="submit"] {
+	background: #000;
+	border-color: transparent;
+	color: #fff;
+	cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+	background: #ccc;
+}
+
+
+/* Buttons' focus effect */
+
+.login input[type="submit"]:focus {
+	border-color: #ccc;
+}
+
+@media (min-width: 601px) {
+	.wtc-col.m6 {
+		width: 49.99999%;
+	}
+	.wtc-table tr:hover:not(:first-child) {
+		background-color: #d8e7f3;
+	}
+	.wtc-table td:before {
+		display: none;
+	}
+	.wtc-table th,
+	.wtc-table td {
+		display: table-cell;
+		padding: 0.25em 0.5em;
+	}
+	.wtc-table th:first-child,
+	.wtc-table td:first-child {
+		padding-left: 0;
+	}
+	.wtc-table th:last-child,
+	.wtc-table td:last-child {
+		padding-right: 0;
+	}
+	.wtc-table th,
+	.wtc-table td {
+		padding: 1em !important;
+	}
+	.wtc-hide-big {
+		display: none !important;
+	}
+}
+
+@media (min-width: 993px) {
+	.wtc-col.l3 {
+		width: 24.99999%;
+	}
+}
+
+.wtc-content {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wtc-content {
+	max-width: 980px;
+}
+
+@media (max-width: 600px) {
+	.wtc-hide-small {
+		display: none !important;
+	}
+	.wtc-table tr:nth-child(2) {
+		border-top: none;
+	}
+	.login {
+		top: 30px;
+		left: 0;
+		width: 320px;
+		font-size: 16px;
+	}
+}
+
+.wtc-top {
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+.wtc-top {
+	top: 0;
+}
+
+.wtc-display-topleft {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.wtc-display-middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+.wtc-row-padding,
+.wtc-row-padding>.wtc-col {
+	padding: 0 8px;
+}
+
+.wtc-container {
+	padding: 0.01em 16px;
+}
+
+.wtc-card {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.wtc-opacity {
+	opacity: 0.6;
+}
+
+.wtc-opacity-min {
+	opacity: 0.75;
+}
+
+.wtc-grayscale {
+	filter: grayscale(75%);
+}
+
+.wtc-xxlarge {
+	font-size: 36px !important;
+}
+
+.wtc-center {
+	text-align: center !important;
+}
+
+.wtc-border {
+	border: 1px solid #ccc !important;
+}
+
+.wtc-border-bottom {
+	border-bottom: 1px solid #ccc !important;
+}
+
+.wtc-section {
+	margin-top: 16px !important;
+	margin-bottom: 16px !important;
+}
+
+.wtc-margin-top {
+	margin-top: 16px !important;
+}
+
+.wtc-margin-bottom {
+	margin-bottom: 16px !important;
+}
+
+.wtc-padding {
+	padding: 8px 16px !important;
+}
+
+.wtc-padding-16 {
+	padding-top: 16px !important;
+	padding-bottom: 16px !important;
+}
+
+.wtc-padding-32 {
+	padding-top: 32px !important;
+	padding-bottom: 32px !important;
+}
+
+.wtc-right {
+	float: right !important;
+}
+
+.wtc-button:hover {
+	color: #000 !important;
+	background-color: #ccc !important;
+}
+
+.wtc-nav-flex {
+	display: flex;
+	justify-content: end;
+}
+
+.wtc-login-wrapper {
+	display: flex;
+	width: 100%;
+	justify-content: end;
+}
+
+.wtc-login {
+	width: 375px;
+}
+
+
+/* Colors */
+
+.wtc-white {
+	color: #000 !important;
+	background-color: #fff !important;
+}
+
+.wtc-black {
+	color: #fff !important;
+	background-color: #000 !important;
+}
+
+.wtc-light-grey {
+	color: #000 !important;
+	background-color: #f1f1f1 !important;
+}
+
+.wtc-hover-text-green:hover {
+	color: #4caf50 !important;
+}
+
+.wtc-text-white {
+	color: #fff !important;
+}
+
+.wtc-border-light-grey {
+	border-color: #f1f1f1 !important;
+}
